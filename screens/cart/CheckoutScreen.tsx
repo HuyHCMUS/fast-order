@@ -59,23 +59,19 @@ export default function CheckoutScreen() {
     try {
       setPlacingOrder(true);
       // In a real app, we would create an address first and get its ID
-      // For now, we'll use a placeholder address ID
-      const addressId = 'temp-address-id';
+      // For now, we'll use null for address_id
+      const addressId = null;
 
       await createOrder(addressId, selectedPayment, 'Order from mobile app');
 
-      Alert.alert(
-        'Success',
-        'Your order has been placed successfully!',
-        [
-          {
-            text: 'OK',
-            onPress: () => {
-              navigation.navigate('Orders' as never);
-            },
-          },
-        ]
-      );
+      // Hiển thị thông báo ngắn gọn và tự động chuyển sang tab Orders
+      Alert.alert('Success', 'Your order has been placed successfully!');
+
+      // Chuyển sang tab Orders
+      navigation.reset({
+        index: 0,
+        routes: [{ name: 'Orders' as never }],
+      });
     } catch (error: any) {
       console.error('Error placing order:', error.message);
       Alert.alert('Error', error.message || 'Failed to place order');

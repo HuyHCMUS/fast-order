@@ -81,7 +81,7 @@ export default function HomeScreen() {
       className="bg-white rounded-lg shadow-sm m-2 overflow-hidden"
       style={{ width: '45%' }}
       onPress={() => {
-        navigation.navigate('MenuDetail' as never, { item } as never);
+        navigation.navigate('MenuDetail', { item });
       }}
     >
       <Image

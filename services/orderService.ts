@@ -203,7 +203,7 @@ export const createOrder = async (
       .from('orders')
       .insert({
         user_id: user.id,
-        address_id: addressId,
+        address: addressId,
         status: 'pending' as OrderStatus,
         payment_status: 'pending' as PaymentStatus,
         payment_method: paymentMethod as PaymentMethod,
