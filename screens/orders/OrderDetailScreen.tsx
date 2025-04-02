@@ -9,27 +9,46 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import { useRoute } from '@react-navigation/native';
 
-const getStatusColor = (status: string) => {
+// Import types
+import { OrderStatus, TransformedOrder } from '../../types/order';
+
+const getStatusColor = (status: OrderStatus) => {
   switch (status) {
-    case 'processing':
+    case 'pending':
+      return 'bg-gray-500';
+    case 'confirmed':
       return 'bg-blue-500';
-    case 'delivering':
+    case 'preparing':
       return 'bg-yellow-500';
+    case 'ready':
+      return 'bg-orange-500';
+    case 'delivering':
+      return 'bg-purple-500';
     case 'delivered':
       return 'bg-green-500';
+    case 'cancelled':
+      return 'bg-red-500';
     default:
       return 'bg-gray-500';
   }
 };
 
-const getStatusText = (status: string) => {
+const getStatusText = (status: OrderStatus) => {
   switch (status) {
-    case 'processing':
-      return 'Processing';
+    case 'pending':
+      return 'Pending';
+    case 'confirmed':
+      return 'Confirmed';
+    case 'preparing':
+      return 'Preparing';
+    case 'ready':
+      return 'Ready';
     case 'delivering':
       return 'Out for Delivery';
     case 'delivered':
       return 'Delivered';
+    case 'cancelled':
+      return 'Cancelled';
     default:
       return status;
   }
@@ -37,7 +56,7 @@ const getStatusText = (status: string) => {
 
 export default function OrderDetailScreen() {
   const route = useRoute();
-  const { order } = route.params as { order: any };
+  const { order } = route.params as { order: TransformedOrder };
 
   const handleContact = () => {
     Linking.openURL('tel:+1234567890');
@@ -111,4 +130,4 @@ export default function OrderDetailScreen() {
       </View>
     </ScrollView>
   );
-} 
+}
