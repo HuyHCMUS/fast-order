@@ -26,7 +26,7 @@ const menuItems = [
     name: 'Beef Burger',
     price: 8.99,
     category: 'Main Dishes',
-    image: 'https://placehold.co/200x200',
+    image: 'https://www.foodandwine.com/thmb/DI29Houjc_ccAtFKly0BbVsusHc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/crispy-comte-cheesburgers-FT-RECIPE0921-6166c6552b7148e8a8561f7765ddf20b.jpg',
     description: 'Juicy beef patty with fresh vegetables and special sauce',
   },
   {
@@ -34,7 +34,7 @@ const menuItems = [
     name: 'Caesar Salad',
     price: 6.99,
     category: 'Appetizers',
-    image: 'https://placehold.co/200x200',
+    image: 'https://static01.nyt.com/images/2024/09/10/multimedia/JG-Parmesan-Crusted-Salmon-Caesar-Saladrex-kjpb/JG-Parmesan-Crusted-Salmon-Caesar-Saladrex-kjpb-mediumSquareAt3X.jpg',
     description: 'Fresh romaine lettuce with caesar dressing and croutons',
   },
   // Add more items as needed
