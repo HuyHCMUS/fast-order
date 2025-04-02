@@ -34,7 +34,7 @@ Fast Order là một ứng dụng di động được xây dựng bằng React N
 
 1. Clone repository:
    ```bash
-   git clone https://github.com/yourusername/fast_order.git
+   git clone https://github.com/HuyHCMUS/fast-order.git
    cd fast_order
    ```
 
