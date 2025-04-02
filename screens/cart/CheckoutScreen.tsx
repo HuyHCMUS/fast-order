@@ -34,7 +34,7 @@ export default function CheckoutScreen() {
         {
           text: 'OK',
           onPress: () => {
-            navigation.navigate('Orders');
+            navigation.navigate('Orders'  as never);
           },
         },
       ]

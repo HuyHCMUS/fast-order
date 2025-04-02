@@ -105,7 +105,7 @@ export default function CartScreen() {
 
         <TouchableOpacity
           className="bg-primary rounded-lg p-4"
-          onPress={() => navigation.navigate('Checkout')}
+          onPress={() => navigation.navigate('Checkout'  as never)}
         >
           <Text className="text-white text-center font-bold text-lg">
             Proceed to Checkout
